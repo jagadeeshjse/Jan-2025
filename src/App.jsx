@@ -1,21 +1,29 @@
-import React from 'react'
+import React from 'react';
+import Hotel from './Hotel.jsx';
+
+import './app.css';
 
 const App = () => {
-  let name1 ='jhone';
+  const hotelData = {
+    img: 'https://a0.muscache.com/im/pictures/6c60f7f6-ceaf-46f9-879a-944bb694c074.jpg?im_w=720',
+    desc: 'Bungalowin Hyderbad'
+  }
+
+  const {img, desc} = hotelData;
+
+
+
   return (
-    <div>
-      <h1 className=''>this is heading</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, minima!</p>
-      <p>{2 + 4}</p>
-      <p>2+4</p>
-      <p>{name1}</p>
+    <div className='main'>
+      <Hotel name={desc} image= {img} />
+      <Hotel name={desc} image= {img}/>
+      <Hotel name={desc} image= {img}/>
+      <Hotel name={desc} image= {img}/>
+      <Hotel name={desc} image= {img}/>
+      
     </div>
   )
 }
-
-// const sum = () =>{
-
-// }
 
 
 export default App;
