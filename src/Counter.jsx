@@ -1,17 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 const Counter = () => {
-    const [count, setCount ] = useState(0);
-    console.log(count)
+  const [count, setCount] = useState(0);
 
-    const increment = () =>{
-        setCount(count + 1)
-    }
+  // useEffect(()=>{
 
-    const decrement = () =>{
-        setCount(count - 1)
-    }
+  // });
+
+  //No dependency
+
+  useEffect(() => {
+    //run on every render
+    console.log('runs on every render')
+  });
+
+  //empty dependency
+
+  useEffect(() => {
+    //runs only on first render
+
+    console.log('first rendering')
+  }, []);
+
+
+  //with dependency values
+  //state or prop value changes
+
+  useEffect(() => {
+    //first time rendering and state or prop changed
+    console.log('state changed')
+  }, [count])
+
+
+
+
+  console.log(count)
+
+  const increment = () => {
+    setCount(count + 1)
+  }
+
+  const decrement = () => {
+    setCount(count - 1)
+  }
 
   return (
     <div>
