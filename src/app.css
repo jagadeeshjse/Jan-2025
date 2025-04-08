@@ -22,3 +22,12 @@
   width: 100%;
   flex-wrap: wrap;
 }
+
+.search {
+  border: 1px solid green;
+  outline: none;
+  height: 40px;
+  width: 400px;
+  border-radius: 10px;
+  font-size: 16px;
+}
