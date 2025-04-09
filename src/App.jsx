@@ -7,6 +7,10 @@ import ShowData from './ShowData.jsx';
 import UserForm from './UserForm.jsx';
 import ShowPhotos from './ShowPhotos.jsx';
 import MealComponent from './MealComponent.jsx';
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './NavBar.jsx';
+import Home from './Home.jsx';
+import About from './About.jsx';
 // import { data } from './data.jsx';
 const App = () => {
   // const hotelData = {
@@ -42,7 +46,20 @@ const App = () => {
         })
       } */}
 
-      <MealComponent />
+      {/* <MealComponent /> */}
+      <NavBar />
+      <div className="content">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/counter' element={<Counter />} />
+          <Route path='/form' element={<UserForm />} />
+          <Route path='/meal' element={<MealComponent />} />
+          <Route path='/showData' element={<ShowData />} />
+          <Route path='/about' element={<About />} />
+
+
+        </Routes>
+      </div>
     </div>
   )
 }
